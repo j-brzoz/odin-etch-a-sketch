@@ -4,6 +4,10 @@
     box-sizing: border-box;;
 }
 
+body {
+    background-color: rgb(3, 60, 3);
+}
+
 .grid {
     display: flex;
     flex-direction: column;
@@ -14,7 +18,39 @@
 }
 
 .square {
-    background-color: grey;
+    background-color: white;
     width: 50px;
     height: 50px;
+}
+
+.colored {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+}
+
+.toolbar input[type="radio"] {
+    visibility: hidden;
+    display: none;
+}
+
+.toolbar label {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toolbar label:hover {
+  background-color:goldenrod;
+  color:white
+}
+.toolbar input[type="radio"]:checked + label {
+    background-color:goldenrod;
+    color:white;
+    border:2px solid white;
 }
