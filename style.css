@@ -6,12 +6,50 @@
 
 body {
     background-color: rgb(142, 192, 207);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 64px;
+    color: goldenrod;
+    font-family: VT323, sans-serif, Arial;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: rgb(97, 163, 183);
+    padding: 8px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    padding-left: 64px;
+}
+
+.gridSize {
+    font-family: sans-serif, Arial;
+    font-size: 24px;
+    color: white;
+    padding: 64px;
+    padding-bottom: 0;
+    font-weight: 600;
+}
+
+.showGridSize {
+    margin: 32px;
 }
 
 .grid {
-    width: 960px;
+    width: 800px;
     display: flex;
     flex-direction: column;
+    padding-top: 64px;
 }
 
 .row {
@@ -20,8 +58,8 @@ body {
 
 .square {
     background-color: white;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 .toolbar input[type="radio"] {
@@ -30,14 +68,21 @@ body {
 }
 
 .toolbar label {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
-    padding: 10px 20px;
     font-family: sans-serif, Arial;
-    font-size: 16px;
+    font-size: 24px;
     border: 2px solid goldenrod;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    margin: 32px;
+    width: 360px;
+    height: 60px;
+    padding-top: 16px;
+    font-weight: 600;
+    
 }
 
 .toolbar label:hover {
@@ -48,4 +93,13 @@ body {
     background-color:goldenrod;
     color:white;
     border:2px solid white;
+}
+
+.footer {
+    font-size: 24px;
+    color: white;
+    font-family: VT323, sans-serif, Arial;
+    text-align: center;
+    background-color: rgb(97, 163, 183);
+    padding: 8px;
 }

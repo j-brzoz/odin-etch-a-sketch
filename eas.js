@@ -30,7 +30,7 @@ function makeGrid(value, shades){
     square.classList.add('square');
     square.setAttribute('id', 'square')
 
-    let sizeOfSquare = 960 / value;
+    let sizeOfSquare = 800 / value;
 
     square.style.cssText = 'width: ' + sizeOfSquare + 'px; height: ' + sizeOfSquare + 'px;'    
 
@@ -154,7 +154,6 @@ const draw = document.querySelector('#draw');
 eraseAll.addEventListener('click', () => {
     let gridElement = document.querySelectorAll('.square');
     for (let i = 0; i < gridElement.length; i++) {
-        //gridElement[i].setAttribute('style', 'background: white');
         gridElement[i].style.setProperty('background-color', 'white');
         shades[i] = 216;
     }
