@@ -7,27 +7,32 @@
         <script src="eas.js" defer></script>
     </head>
     <body>
-        <div class="gridSize">
-            <label for="gridSize">Choose grid size:</label>
-            <input type="range" id="gridSize" value="16" name="gridSize" min="1" max="64" step="1">
-            <p class="showGridSize">
-                "Grid size "
-                <span id="range-"></span>
-            </p>
+        <p class="header">Etch-a-Sketch</p>
+        <div class="main">
+            <div class="gridSize">
+                <label for="gridSize">Choose grid size:</label>
+                <input type="range" id="gridSize" value="16" name="gridSize" min="1" max="64" step="1" onmousemove="rangeValue(this.value)" onChange="range(this.value)">         
+                <p class="showGridSize">
+                    Grid size: 
+                    <span id="rangeValue"></span>
+                    x 
+                    <span id="rangeValue"></span>
+                </p>
+            </div>
+            <div class="toolbar">
+                <input type="radio" id="eraseAll" name="val" value="EraseAll" checked/>
+                <label for="eraseAll">Erase All</label>            
+                <input type="radio" id="erase" name="val" value="Erase" checked/>
+                <label for="erase">Erase</label>
+                <input type="radio" id="lighten" name="val" value="Lighten" checked/>
+                <label for="lighten">Lighten</label>
+                <input type="radio" id="shade" name="val" value="Shade" checked/>
+                <label for="shade">Shade</label>
+                <input type="radio" id="draw" name="val" value="Draw" checked/>
+                <label for="draw">Draw</label>
+            </div>
+            <div id="grid"></div>
         </div>
-        <div class="toolbar">
-            <input type="radio" id="eraseAll" name="val" value="EraseAll" checked/>
-            <label for="eraseAll">Erase All</label>            
-            <input type="radio" id="erase" name="val" value="Erase" checked/>
-            <label for="erase">Erase</label>
-            <input type="radio" id="lighten" name="val" value="Lighten" checked/>
-            <label for="lighten">Lighten</label>
-            <input type="radio" id="shade" name="val" value="Shade" checked/>
-            <label for="shade">Shade</label>
-            <input type="radio" id="draw" name="val" value="Draw" checked/>
-            <label for="draw">Draw</label>
-        </div>
-       
-        <div id="grid"></div>
+        <div class="footer"></div>
     </body>
 </html>

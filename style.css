@@ -5,10 +5,11 @@
 }
 
 body {
-    background-color: rgb(3, 60, 3);
+    background-color: rgb(142, 192, 207);
 }
 
 .grid {
+    width: 960px;
     display: flex;
     flex-direction: column;
 }
@@ -19,14 +20,8 @@ body {
 
 .square {
     background-color: white;
-    width: 50px;
-    height: 50px;
-}
-
-.colored {
-    background-color: black;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .toolbar input[type="radio"] {
